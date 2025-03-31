@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* Letter Reveal Animation (Each Letter Appears One by One) */
+@keyframes letterReveal {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-letterReveal {
+    display: inline-block;
+    animation: letterReveal 1.5s ease-out forwards;
+}
+
+.animate-letterReveal span {
+    display: inline-block;
+    opacity: 0;
+    animation: letterReveal 1.5s ease-out forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+/* Pulse Animation for Text */
+@keyframes pulseIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-pulseIn {
+    animation: pulseIn 1s ease-out forwards;
+}
+
+.animate-pulseIn.delay-400 {
+    animation-delay: 0.4s;
+}
+
+/* Neon Glow Button Effect */
+@keyframes neonGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
+        transform: scale(1.05);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+}
+
+.hover\:animate-neonGlow:hover {
+    animation: neonGlow 1.5s ease-in-out infinite;
+}
+
+/* Fluid Gradient Animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.bg-gradient-to-r {
+    animation: gradientMove 10s ease infinite;
+    background-size: 400% 400%;
+}
+
+/* Smooth Hover Effects on Button */
+button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
