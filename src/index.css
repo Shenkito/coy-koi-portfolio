@@ -1,79 +1,31 @@
 @import "tailwindcss";
 
-/* Letter Reveal Animation (Each Letter Appears One by One) */
-@keyframes letterReveal {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.animate-letterReveal {
-    display: inline-block;
-    animation: letterReveal 1.5s ease-out forwards;
-}
-
-.animate-letterReveal span {
-    display: inline-block;
-    opacity: 0;
-    animation: letterReveal 1.5s ease-out forwards;
-    animation-delay: calc(0.1s * var(--i));
-}
-
-/* Pulse Animation for Text */
-@keyframes pulseIn {
-    0% {
+@keyframes fadeInUp {
+    from {
         opacity: 0;
         transform: translateY(20px);
     }
 
-    50% {
-        opacity: 0.5;
-        transform: translateY(0);
-    }
-
-    100% {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.animate-pulseIn {
-    animation: pulseIn 1s ease-out forwards;
-}
-
-.animate-pulseIn.delay-400 {
-    animation-delay: 0.4s;
-}
-
-/* Neon Glow Button Effect */
-@keyframes neonGlow {
+@keyframes float {
     0% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
-        transform: scale(1);
+        transform: translateY(0);
     }
 
     50% {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
-        transform: scale(1.05);
+        transform: translateY(-10px);
     }
 
     100% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
-        transform: scale(1);
+        transform: translateY(0);
     }
 }
 
-.hover\:animate-neonGlow:hover {
-    animation: neonGlow 1.5s ease-in-out infinite;
-}
-
-/* Fluid Gradient Animation */
 @keyframes gradientMove {
     0% {
         background-position: 0% 50%;
@@ -88,15 +40,48 @@
     }
 }
 
-.bg-gradient-to-r {
-    animation: gradientMove 10s ease infinite;
-    background-size: 400% 400%;
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-/* Smooth Hover Effects on Button */
-button:hover {
-    transform: scale(1.1);
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.3);
+.hero-slide {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slide-in 1s ease-out forwards;
+}
+
+
+/* Hero Section */
+.hero {
+    animation: fadeInUp 1s ease-out;
+    background-size: 200% 200%;
+    animation: gradientMove 5s infinite alternate ease-in-out;
+}
+
+/* Text & Button Animations */
+.hero h1,
+.hero p {
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero button {
     transition: all 0.3s ease-in-out;
 }
+
+.hero button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Floating Image */
+/* .hero img {
+    animation: float 3s infinite ease-in-out;
+} */
