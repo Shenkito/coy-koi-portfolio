@@ -1,31 +1,25 @@
 @import "tailwindcss";
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+* {
+  box-sizing: inherit;
 }
 
+body {
+  position: relative;
+  min-height: 100vh;
+  background-color: #000; /* Match your site theme */
+}
+
+/* Optional: Moving Gradient Animation (only keep if you're using it) */
 @keyframes gradientMove {
     0% {
         background-position: 0% 50%;
@@ -40,48 +34,18 @@
     }
 }
 
-@keyframes slide-in {
-    from {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.hero-slide {
-    opacity: 0;
-    transform: translateX(100%);
-    animation: slide-in 1s ease-out forwards;
-}
-
-
-/* Hero Section */
+/* Hero Section Background (keep if you're using animated gradient background) */
 .hero {
-    animation: fadeInUp 1s ease-out;
     background-size: 200% 200%;
     animation: gradientMove 5s infinite alternate ease-in-out;
 }
 
-/* Text & Button Animations */
-.hero h1,
-.hero p {
-    animation: fadeInUp 1s ease-out;
-}
-
+/* Button Hover Effects (optional — keep if you want shadow effect) */
 .hero button {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .hero button:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
 }
-
-/* Floating Image */
-/* .hero img {
-    animation: float 3s infinite ease-in-out;
-} */
