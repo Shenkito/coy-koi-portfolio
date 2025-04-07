@@ -32,8 +32,8 @@ const MyServices = () => {
                     </h3>
                     <h2 className="text-4xl md:text-5xl font-bold mb-4">What can I do</h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        Any type of commercial or personal photo or video shooting. Any
-                        conditions, a personalized approach to each.
+                        Any type of commercial or personal photo or video shooting. Any conditions,
+                        a personalized approach to each.
                     </p>
                 </motion.div>
 
@@ -49,8 +49,7 @@ const MyServices = () => {
                         <h1 className="text-purple-500 text-4xl font-bold mb-4">1</h1>
                         <h3 className="text-lg font-semibold mb-2">Wedding Photography</h3>
                         <p className="text-gray-400">
-                            Capture Your Most Unforgettable Moments In Tender And Emotional
-                            Frames – Wedding Photography That Will Stay With You Forever
+                            Capture Your Most Unforgettable Moments In Tender And Emotional Frames – Wedding Photography That Will Stay With You Forever
                         </p>
                     </motion.div>
 
@@ -65,8 +64,7 @@ const MyServices = () => {
                         <h1 className="text-purple-500 text-4xl font-bold mb-4">2</h1>
                         <h3 className="text-lg font-semibold mb-2">Commercial Photography</h3>
                         <p className="text-gray-400">
-                            Elevate Your Brand With Stunning Commercial Photography That Tells
-                            Your Unique Story And Captures Your Product In Its Best Light
+                            Elevate Your Brand With Stunning Commercial Photography That Tells Your Unique Story And Captures Your Product In Its Best Light
                         </p>
                     </motion.div>
 
@@ -81,8 +79,7 @@ const MyServices = () => {
                         <h1 className="text-purple-500 text-4xl font-bold mb-4">3</h1>
                         <h3 className="text-lg font-semibold mb-2">Video Production</h3>
                         <p className="text-gray-400">
-                            Transform Your Ideas Into Captivating Visual Stories With My
-                            Expertise In Video Production. Let's Bring Your Vision To Life
+                            Transform Your Ideas Into Captivating Visual Stories With My Expertise In Video Production. Let's Bring Your Vision To Life
                         </p>
                     </motion.div>
                 </div>
